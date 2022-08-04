@@ -1,0 +1,23 @@
+.title {
+    text-align: center;
+    color: rgb(208, 204, 204);
+    padding: 350px;
+    background-color: blue;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.name-title {
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.small {
+    font-size: 24px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+

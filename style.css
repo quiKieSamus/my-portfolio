@@ -1,4 +1,32 @@
-.title {
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    height: 100%;
+    top: 0;
+}
+
+.nav-bar {
+    background-color: black;
+    text-align: center;
+    top: 0%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+.nav-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px;
+    padding: 0;
+    color: rgb(208, 204, 204);
+}
+
+.title {    
     text-align: center;
     color: rgb(208, 204, 204);
     padding: 350px;
@@ -7,9 +35,19 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .name-title {
     font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.name-title:hover {
+    color: black;
+    font-size: 100px;
+    transition: 1s;
 }
 
 .small {
@@ -19,5 +57,6 @@
 .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
 }
 

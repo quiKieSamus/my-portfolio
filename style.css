@@ -11,7 +11,7 @@ html {
 .nav-bar {
     background-color: black;
     text-align: center;
-    top: 0%;
+    top: 0;
     width: 100%;
     position: fixed;
     left: 0;
@@ -29,10 +29,14 @@ html {
 .title {    
     text-align: center;
     color: rgb(208, 204, 204);
-    padding: 350px;
     background-color: blue;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
+    padding: 14% 0px;
+}
+
+.test {
+    height: 100%;
 }
 
 .no-margin {
@@ -59,4 +63,22 @@ html {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 100px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .name-title:hover {
+        font-size: 60px;
+        transition: 1s;
+    }
+    
+    .title {
+        padding: 100% auto;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 

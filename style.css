@@ -11,11 +11,13 @@ html {
 .nav-bar {
     background-color: black;
     text-align: center;
+    padding: 20px;
     top: 0;
     width: 100%;
     position: fixed;
     left: 0;
     right: 0;
+    transition: top 0.3s;
 }
 .nav-list {
     list-style: none;

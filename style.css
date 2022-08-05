@@ -32,12 +32,28 @@ html {
     background-color: blue;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
-    padding: 14% 0px;
+    padding: 17% 0px;
 }
 
-.test {
-    height: 100%;
+.objective {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
+.obj-title {
+    width: 54%;
+}
+
+.obj-p {
+    max-width: 75ch;
+}
+
+/* .profile-pic {
+    width: 244px;
+    height: 344px;
+    border-radius: 1950px;
+} */
 
 .no-margin {
     margin: 0;
@@ -73,6 +89,10 @@ html {
     
     .title {
         padding: 100% auto;
+    }
+
+    .obj-title {
+        width: initial;
     }
 
     .project-container {

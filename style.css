@@ -31,6 +31,15 @@ html {
 }
 .nav-list a {
     color: rgb(208, 204, 204);
+    /* padding: 30px; */
+}
+
+.nav-list-item {
+    padding: 20px;
+}
+
+.nav-list-item:hover {
+    background-color: blue;
 }
 
 .title {    
@@ -39,7 +48,8 @@ html {
     background-color: blue;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
-    padding: 17% 0px;
+    padding: 15% 0px;
+    
 }
 
 .btn-me {
@@ -49,7 +59,7 @@ html {
     font-size: 25px;
 }
 
-.objective, .projects {
+.objective, .projects, .one-pages {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -76,6 +86,7 @@ html {
 .name-title {
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 1s;
 }
 
 .name-title:hover {
@@ -89,14 +100,31 @@ html {
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 54%;
     
 }
 
-.pro-item {
+.pro-link {
+    color: rgb(58, 49, 49);
+    transition: 2s;
 }
+
+.pro-link:hover {
+    color: blue;
+    transition: 0.3s;
+}
+
+.pages-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: 0.3s;
+}
+
+/* .pro-item {
+} */
 
 
 @media screen and (max-width: 600px) {
@@ -116,6 +144,7 @@ html {
     .project-container {
         display: flex;
         flex-direction: column;
+        width: initial;
     }
 }
 

@@ -12,32 +12,35 @@
 <body>
     <div class="nav-bar">
         <ul class="nav-list">
-            <li><a href="#objective">Objective</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li class="nav-list-item"><a href="#objective">Objective</a></li>
+            <li class="nav-list-item"><a href="#one-pages">One-pages</a></li>
+            <li class="nav-list-item"><a href="#projects">Projects</a></li>
         </ul>
     </div>
-    <div class="title">
-        <div class="test">
+    <div class="hero-container">
+        <div class="title">
             <h2 class="no-margin">Hi! I'm <span class="name-title">Rubén</span></h2>
-            <h1><span class="small">a</span>  Software Developer</h1>
+            <h1><span class="small">a</span> Software Developer</h1>
             <a href="#objective"><button class="btn-me">Know about me</button></a>
-
         </div>
     </div>
 
-    <div class="objective" id="objective">
-        <div class="obj-title"><h2>Objective:</h2></div>
-        <p class="obj-p">I'm a Computer Engineering Student in search for a job that would allow me to apply the knowledge
-            gathered
-            throughout the career. I'm eager to improve your organization or company. </p>
-    </div>
+    <div class="obj">
+        <div class="objective" id="objective">
+            <div class="obj-title">
+                <h2>Objective:</h2>
+            </div>
+            <p class="obj-p">I'm a Computer Engineering Student in search for a job that would allow me to apply the
+                knowledge
+                gathered
+                throughout the career. I'm eager to improve your organization or company. </p>
+        </div>
 
-    <div id="projects" class="projects">
-        <div class="obj-title"><h2>Projects:</h2></div>
-        <div class="project-container">
-            <div class="pro-item">
-                <h3>Pozos Petroleros en PHP</h3>
+        <!-- <div id="one-pages" class="one-pages">
+        <div class="obj-title"><h2>One-pages:</h2></div>
+        <div class="pages-container">
+            <div class="page-item">
+                <h3><a href="https://github.com/quiKieSamus/oil-php-revengeance" target="_blank">Pozos  Petroleros en PHP</a></h3>
                 <p>Tecnologias usadas:</p>
                 <ul>
                     <li>HTML and CSS</li>
@@ -51,8 +54,8 @@
                 </p>
             </div>
 
-            <div class="pro-item">
-                <h3>Administración de exámenes de un laboratorio clinico</h3>
+            <div class="page-item">
+                <h3><a href="https://github.com/quiKieSamus/laboratory-php" target="_blank">Administración de exámenes de un laboratorio clinico</a></h3>
                 <p>Tecnologias usadas:</p>
                 <ul>
                     <li>HTML and CSS</li>
@@ -65,19 +68,50 @@
                 </p>
             </div>
 
-            <div class="pro-item">
-                <h3>Derrotar a Morgott</h3>
-                <p>Tecnologias usadas:</p>
-                <ul>
-                    <li>Control de PS3</li>
-                    <li>Skills de mierda</li>
-                    <li>Soy un asco en elden ring</li>
-                </ul>
-                <p>Definicion:<br>
-                    Soy una mierda en ese juego no sirvo pa nada xDDDD estoy llenando espacio porque no se que poner
-                </p>
-            </div>
+        </div>
+    </div> -->
 
+        <div id="projects" class="projects">
+            <div class="obj-title">
+                <h2>Projects:</h2>
+            </div>
+            <div class="project-container">
+                <div class="pro-item">
+                    <h3><a class="pro-link" href="https://github.com/quiKieSamus/oil-php-revengeance"
+                            target="_blank">Oil Wells</a></h3>
+                    <p>Used Technologies:</p>
+                    <ul>
+                        <li>HTML and CSS</li>
+                        <li>JavaScript (Vanilla and chart.js)</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                    </ul>
+                    <p>Project Overview:<br>
+                        Recording of pressure and time measurements in oil wells and graphical representation with chart.js 
+                    </p>
+                </div>
+
+                <div class="pro-item">
+                    <h3><a class="pro-link" href="https://github.com/quiKieSamus/laboratory-php"
+                            target="_blank">Clinical Laboratory Administration</a></h3>
+                    <p>Used Technologies:</p>
+                    <ul>
+                        <li>HTML and CSS</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                    </ul>
+                    <p>Project Overview:<br>
+                        Management of clinical exams (CRUD Software)
+                    </p>
+                </div>
+
+                <div class="pro-item">
+
+
+                </div>
+
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

@@ -11,3 +11,15 @@ window.onscroll = () => {
     }
     prevScrollPos = currentScrollPos;
 }
+
+let navListItem = document.getElementsByClassName("nav-list-item");
+
+let navlist = document.querySelector(".nav-list");
+
+
+window.onload = () => {
+    navlist.style.gridTemplateColumns = "1fr"
+    for (let i = 0; i < navListItem.length -1; i++) {
+        navlist.style.gridTemplateColumns += " 1fr"
+    }
+}

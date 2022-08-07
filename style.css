@@ -156,6 +156,7 @@ html {
 
     .obj-title {
         width: initial;
+        text-align: center;
     }
 
     .one-pages, .project-container, .objective {

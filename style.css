@@ -107,7 +107,7 @@ html {
 }
 
 .pro-link {
-    color: rgb(58, 49, 49);
+    color: blueviolet;
     transition: 2s;
 }
 
@@ -129,12 +129,12 @@ html {
 
 .social-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .nav-bar {
         padding: 5px;
     }

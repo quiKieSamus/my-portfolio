@@ -25,12 +25,11 @@ html {
     list-style: none;
     display: grid;
     margin: 0px;
-    padding: 0;
     color: rgb(208, 204, 204);
 }
 .nav-list a {
+    display: block;
     color: rgb(208, 204, 204);
-    /* padding: 30px; */
 }
 
 .nav-list-item {
@@ -39,6 +38,8 @@ html {
 
 .nav-list-item:hover {
     background-color: blue;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .title {    
@@ -129,10 +130,14 @@ html {
 
 .social-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
+.ico-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media screen and (max-width: 800px) {
     .nav-bar {

@@ -3,6 +3,10 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+html, body {
+    margin: 0;
+}
+
 html {
     height: 100%;
     top: 0;

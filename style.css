@@ -173,6 +173,8 @@ html, body {
     .hmbgr {
         display: block;
         color: white;
+        padding: 15px;
+        width: inherit;
     }
 
     .name-title {

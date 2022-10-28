@@ -4,16 +4,12 @@
 }
 
 html, body {
+    height: 100%;
     margin: 0;
 }
 
-html {
-    height: 100%;
-    top: 0;
-}
-
 .nav-bar {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
     top: 0;
@@ -25,6 +21,11 @@ html {
     right: 0;
     transition: top 0.3s;
 }
+
+.hmbgr {
+    display: none;
+}
+
 .nav-list {
     list-style: none;
     display: grid;
@@ -41,18 +42,23 @@ html {
 }
 
 .nav-list-item:hover {
-    background-color: blue;
+    background-color: rgb(0, 0, 255);
     cursor: pointer;
     transition: 0.5s;
 }
 
-.title {    
-    text-align: center;
+.title {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     color: rgb(208, 204, 204);
-    background-color: blue;
-    border-radius: 10px;
+    background-color: rgb(0, 0, 255);
+    /* border-radius: 10px; */
     font-family: 'Courier New', Courier, monospace;
-    padding: 15% 0px;
+    height: 100vh;
+    border: black solid 10px;
+    /* padding: 15% 0px; */
     
 }
 
@@ -94,7 +100,7 @@ html {
 }
 
 .name-title:hover {
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 100px;
     transition: 1s;
 }
@@ -103,21 +109,26 @@ html {
     font-size: 24px;
 }
 
-.project-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 54%;
-    
+.pro-item {
+    width: 60vw;
+    margin: 5px auto;
+    border: black solid 5px;
+    transition: 0.3s;
+}
+
+.pro-item:hover {
+    border: 7px solid darkblue;
+    transition: 0.3s;
+    padding: 10px;
 }
 
 .pro-link {
-    color: blueviolet;
+    color: rgb(138, 43, 226);
     transition: 2s;
 }
 
 .pro-link:hover {
-    color: blue;
+    color: rgb(0, 0, 255);
     transition: 0.3s;
 }
 
@@ -127,9 +138,9 @@ html {
 }
 
 .page-img {
-    width: 100%;
+    width: 60vw;
     border-radius: 5px;
-    border: solid 5px black;
+    border: solid 5px rgb(0, 0, 0);
 }
 
 .social-container {
@@ -147,7 +158,23 @@ html {
     .nav-bar {
         padding: 5px;
     }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list-active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
     
+    .hmbgr {
+        display: block;
+        color: white;
+    }
+
     .name-title {
         font-size: 40px;
     }
@@ -174,6 +201,9 @@ html {
 
     .project-container {
         width: initial;
+        display: flex;
+        flex-direction: column  ;
+        max-width: 50%;
     }
 
     .page-img {

@@ -29,7 +29,10 @@ hamburguerBtn.addEventListener("click", () => {
 
 });
 
-function createSkill(url, name) {
+function createSkill(iconSrc, name) {
     const div = document.createElement("DIV");
-    
+    const icon = document.createElement("I");
+    const title = document.createElement("H3");
+    div.appendChild(icon);
+    div.appendChild(title);
 }

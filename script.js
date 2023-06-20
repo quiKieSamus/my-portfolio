@@ -4,10 +4,10 @@ const navListItem = document.getElementsByClassName("nav-list-item");
 const navlist = document.querySelector(".nav-list");
 const hamburguerBtn = document.getElementById("hmbgrBtn");
 
-window.onscroll = () => {
+this.addEventListener("scroll", () => {
     let navBar = document.querySelector('.nav-bar');
     let currentScrollPos = window.scrollY;
-    if(prevScrollPos > currentScrollPos) {
+    if (prevScrollPos > currentScrollPos) {
         navBar.style.top = "0";
     } else {
         navBar.style.top = "-130px"
@@ -16,7 +16,7 @@ window.onscroll = () => {
         }
     }
     prevScrollPos = currentScrollPos;
-}
+});
 
 
 
@@ -26,12 +26,10 @@ hamburguerBtn.addEventListener("click", () => {
     } else {
         navlist.classList = "nav-list-active";
     }
-    
+
 });
 
-window.onload = () => {
-    navlist.style.gridTemplateColumns = "1fr"
-    for (let i = 0; i < navListItem.length -1; i++) {
-        navlist.style.gridTemplateColumns += " 1fr"
-    }
+function createSkill(url, name) {
+    const div = document.createElement("DIV");
+    
 }

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "my portfolio",
   "main": "index.html",
+  "homepage": "https://quikiesamus.github.io/my-portfolio/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,8 +18,10 @@
   "bugs": {
     "url": "https://github.com/quiKieSamus/my-portfolio/issues"
   },
-  "homepage": "https://github.com/quiKieSamus/my-portfolio#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

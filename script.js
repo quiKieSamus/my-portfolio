@@ -29,7 +29,7 @@ hamburguerBtn.addEventListener("click", () => {
 
 });
 
-function fillSkillContainer () {
+function fillSkillContainer() {
     function createSkill(iconSrc, name) {
         const div = document.createElement("DIV");
         const icon = document.createElement("I");
@@ -39,64 +39,65 @@ function fillSkillContainer () {
             image.classList.add("icon")
             image.src = iconSrc;
             div.appendChild(image);
-    
+
         } else {
             icon.classList.add("icon", `fa-brands`, `${iconSrc}`);
             div.appendChild(icon);
         }
         title.textContent = name;
         div.appendChild(title);
+        div.classList.add("skill-item");
         return div;
-    }    
+    }
     const container = document.querySelector(".skills-container");
     const skills = [
         {
             iconSrc: "fa-html5",
-            name: "HTML5" 
-        }, 
+            name: "HTML5"
+        },
         {
             iconSrc: "fa-css3",
-            name: "CSS" 
+            name: "CSS"
         },
         {
             iconSrc: "fa-js",
-            name: "Javascript" 
+            name: "Javascript"
         },
         {
             iconSrc: "fa-php",
-            name: "PHP" 
+            name: "PHP"
         },
         {
             iconSrc: "./icons/mysql.svg",
-            name: "MYSQL" 
+            name: "MYSQL"
         },
         {
             iconSrc: "fa-bootstrap",
-            name: "Bootstrap" 
+            name: "Bootstrap"
         },
         {
             iconSrc: "fa-node-js",
-            name: "NodeJS" 
+            name: "NodeJS"
         },
         {
             iconSrc: "fa-linux",
-            name: "LINUX" 
+            name: "LINUX"
         },
         {
             iconSrc: "fa-git-alt",
-            name: "GIT" 
+            name: "GIT"
         },
         {
             iconSrc: "fa-laravel",
-            name: "Laravel" 
+            name: "Laravel"
         },
         {
             iconSrc: "./icons/typescript.svg",
-            name: "Typescript" 
+            name: "Typescript"
         },
         {
             iconSrc: "./icons/aurelia.svg",
-            name: "Aurelia" 
+            name: "Aurelia"
         },
 
     ]
@@ -112,7 +113,7 @@ function fillProjectContainer() {
         const titleEl = document.createElement("H3");
         const technologiesList = document.createElement("OL");
         const overviewEl = document.createElement("P");
-    
+
         link.href = repoLink;
         link.target = "_blank"
         link.classList.add("pro-link");
@@ -134,14 +135,14 @@ function fillProjectContainer() {
         {
             link: "https://github.com/Landbios/Tesis",
             title: "Animal Adoption System",
-            usedTechnologies: ["NodeJS", "Bootstrap", "HTTP", "MYSQL"],
+            usedTechnologies: ["NodeJS", "Bootstrap", "HTTP", "MySQL"],
             overview: "A system for the adoption of animals. User creation, Animal registering, notifications."
         },
         {
             link: "https://github.com/quiKieSamus/poke-searcher",
             title: "poke-searcher",
-            usedTechnologies: ["NodeJS", "CLI", "PokeApi"],
-            overview: "A CLI tool to gather pokemon information from the pokeapi rest api."
+            usedTechnologies: ["NodeJS", "HTTP", "CLI", "PokeApi"],
+            overview: "A CLI tool to gather pokemon information from the pokeapi rest api using built-in https nodejs module."
         },
         {
             link: "https://github.com/quiKieSamus/grinding-code",
@@ -156,5 +157,83 @@ function fillProjectContainer() {
     })
 }
 
+function fillFindMeContainer() {
+    const contactInfo = [
+        {
+            imgSrc: "icons/logo_github_icon_143196.ico",
+            alt: "Ruben's github profile",
+            width: "20",
+            height: "20",
+            link: "https://github.com/quiKieSamus",
+            profileName: "Github"
+        },
+        {
+            imgSrc: "icons/logo_linkedin_icon_143191.png",
+            alt: "Ruben's linkedin profile",
+            width: "20",
+            height: "20",
+            link: "https://www.linkedin.com/in/rub%C3%A9n-gonz%C3%A1lez-godoy-a093a31a7/",
+            profileName: "Linkedin"
+        },
+        {
+            imgSrc: "icons/discord.png",
+            alt: "Ruben's discord profile",
+            width: "20",
+            height: "20",
+            link: "https://discord.com/users/944392232029552730",
+            profileName: "Discord"
+        },
+        {
+            imgSrc: "icons/twitter.png",
+            alt: "Ruben's twitter profile",
+            width: "20",
+            height: "20",
+            link: "https://twitter.com/quiKieSamus",
+            profileName: "Twitter"
+        },
+        {
+            imgSrc: "icons/gmail.ico",
+            alt: "Ruben's gmail address",
+            width: "20",
+            height: "20",
+            link: "",
+            profileName: "Gmail"
+        },
+        {
+            imgSrc: "icons/tlg.png",
+            alt: "Ruben's telegram",
+            width: "20",
+            height: "20",
+            link: "https://t.me/reyarepa",
+            profileName: "Telegram"
+        },
+    ];
+
+    function createContactInfo(imgSrc, alt, width, height, link, profileName) {
+        const div = document.createElement("DIV");
+        const img = document.createElement("IMG");
+        const linkEl = document.createElement("A");
+
+        img.src = `./${imgSrc}`;
+        img.alt = alt;
+        img.width = width;
+        img.height = height;
+        linkEl.href = link;
+        linkEl.textContent = profileName;
+        linkEl.style.textDecoration = "none";
+        linkEl.style.color = "white";
+
+        div.appendChild(img);
+        div.appendChild(linkEl);
+        return div;
+    }
+
+    const container = document.querySelector(".contact-container");
+    contactInfo.map((item) => {
+        container.appendChild(createContactInfo(item.imgSrc, item.alt, item.width, item.height, item.link, item.profileName));
+    });
+}
+
 fillSkillContainer();
 fillProjectContainer();
+fillFindMeContainer();

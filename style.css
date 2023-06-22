@@ -150,6 +150,9 @@ html, body {
 }
 
 .skills-container {
+    background-color: rgb(233, 65, 65);
+    padding: 50px;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -168,6 +171,7 @@ html, body {
 .icon {
     width: 100%;
     height: 70px;
+    font-size: 70px;
 }
 
 .skill-item {

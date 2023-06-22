@@ -4,7 +4,7 @@ const navListItem = document.getElementsByClassName("nav-list-item");
 const navlist = document.querySelector(".nav-list");
 const hamburguerBtn = document.getElementById("hmbgrBtn");
 
-this.addEventListener("scroll", () => {
+addEventListener("scroll", () => {
     let navBar = document.querySelector('.nav-bar');
     let currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos) {

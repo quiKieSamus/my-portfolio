@@ -27,6 +27,8 @@ html, body {
 
 .hmbgr {
     display: none;
+    width: 0;
+    height: 0;
 }
 
 .nav-list {
@@ -56,8 +58,9 @@ html, body {
 }
 
 .nav-list-item:hover {
-    background-color: rgb(0, 0, 255);
+    background-color: rgb(0, 255, 208); 
     cursor: pointer;
+    color: black;
     transition: 0.5s;
 }
 
@@ -109,7 +112,7 @@ html, body {
 }
 
 .name-title:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 255, 208);
     font-size: 100px;
     transition: 1s;
 }
@@ -152,6 +155,7 @@ html, body {
 .skills-container {
     background-color: rgb(233, 65, 65);
     padding: 50px;
+    padding-bottom: 50px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -198,7 +202,7 @@ html, body {
 
 @media screen and (max-width: 800px) {
     .nav-bar {
-        padding: 5px;
+        padding: 30px;
     }
 
     .nav-list {
@@ -209,7 +213,6 @@ html, body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
     }
     
     .hmbgr {
@@ -219,12 +222,17 @@ html, body {
         width: inherit;
     }
 
+    .objective {
+        width: 95vw;
+        margin-left: 10px;
+    }
+
     .name-title {
-        font-size: 40px;
+        font-size: 70px;
     }
 
     .name-title:hover {
-        font-size: 50px;
+        font-size: 100px;
         transition: 1s;
     }
     
@@ -239,20 +247,24 @@ html, body {
         text-align: center;
     }
 
-    /* .one-pages, .project-container, .objective {
-        display: initial;
-    } */
-
     .skills-container {
         gap: 5vw;
+        padding: 50px 0;
     }
 
+    .icon {
+        width: 100%;
+        height: 40px;
+        font-size: 40px;
+    }
 
     .project-container {
         display: flex;
         flex-direction: column  ;
-        
-        
+    }
+
+    .pro-item {
+        width: 95vw;
     }
 
     .page-img {

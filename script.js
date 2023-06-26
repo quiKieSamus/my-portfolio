@@ -3,30 +3,42 @@ let prevScrollPos = window.scrollY;
 const navListItem = document.getElementsByClassName("nav-list-item");
 const navlist = document.querySelector(".nav-list");
 const hamburguerBtn = document.getElementById("hmbgrBtn");
+const navListItemArr = Array.from(document.querySelectorAll(".nav-list-item"));
+
+navListItemArr.map((item) => {
+    item.addEventListener("mouseover", (e) => {
+        e.target.childNodes[0].parentElement.style.color = "black";
+    });
+});
+
+navListItemArr.map((item) => {
+    item.addEventListener("mouseout", (e) => {
+        e.target.childNodes[0].parentElement.style.color = "white";
+    });
+});
 
 addEventListener("scroll", () => {
     let navBar = document.querySelector('.nav-bar');
     let currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos) {
-        navBar.style.top = "0";
-    } else {
-        navBar.style.top = "-130px"
-        if (navlist.classList[0] === "nav-list-active") {
-            navlist.classList = "nav-list";
-        }
+        prevScrollPos = currentScrollPos;
+        return navBar.style.top = "0";
+    }
+    navBar.style.top = "-130px";
+    if (navlist.classList.contains("nav-list-active")) {
+        navlist.classList = "nav-list";
     }
     prevScrollPos = currentScrollPos;
 });
 
 
 
-hamburguerBtn.addEventListener("click", () => {
-    if (navlist.classList[0] === "nav-list-active") {
-        navlist.classList = "nav-list";
+hamburguerBtn.addEventListener("click", (e) => {
+    if (!navlist.classList.contains("nav-list-active")) {
+        navlist.classList.add("nav-list-active");
     } else {
-        navlist.classList = "nav-list-active";
+        navlist.classList.remove("nav-list-active");
     }
-
 });
 
 function fillSkillContainer() {

@@ -151,8 +151,8 @@ function fillProjectContainer() {
             overview: "A system for the adoption of animals. User creation, Animal registering, notifications."
         },
         {
-            link: "https://github.com/quiKieSamus/poke-searcher",
-            title: "poke-searcher",
+            link: "https://www.npmjs.com/package/poke-searcher",
+            title: "poke-search",
             usedTechnologies: ["NodeJS", "HTTP", "CLI", "PokeApi"],
             overview: "A CLI tool to gather pokemon information from the pokeapi rest api using built-in https nodejs module."
         },

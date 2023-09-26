@@ -200,6 +200,12 @@ html, body {
     gap: 5px;
 }
 
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 @media screen and (max-width: 800px) {
     .nav-bar {
         padding: 30px;

@@ -196,12 +196,12 @@ function fillFindMeContainer() {
             profileName: "Discord"
         },
         {
-            imgSrc: "icons/twitter.png",
+            imgSrc: "icons/x.svg",
             alt: "Ruben's twitter profile",
             width: "20",
             height: "20",
             link: "https://twitter.com/quiKieSamus",
-            profileName: "Twitter"
+            profileName: "X (Twitter)"
         },
         {
             imgSrc: "icons/gmail.ico",
@@ -225,6 +225,8 @@ function fillFindMeContainer() {
         const div = document.createElement("DIV");
         const img = document.createElement("IMG");
         const linkEl = document.createElement("A");
+
+        div.classList.add('contact-item');
 
         img.src = `./${imgSrc}`;
         img.alt = alt;

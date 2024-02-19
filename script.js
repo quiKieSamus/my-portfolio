@@ -107,10 +107,6 @@ function fillSkillContainer() {
             iconSrc: "./icons/typescript.svg",
             name: "Typescript"
         },
-        {
-            iconSrc: "./icons/aurelia.svg",
-            name: "Aurelia"
-        },
 
     ]
 
@@ -145,20 +141,38 @@ function fillProjectContainer() {
     }
     const projects = [
         {
+            link: "https://github.com/quikiesamus/smart-dtp7-library",
+            title: "Smart DTP7 Library (2024)",
+            usedTechnologies: ["PHP", "Rest API"],
+            overview: "An abstraction library intended to handle data from the Smart DTP 7 fiscal printer model."
+        },
+        {
+            link: "https://www.npmjs.com/package/poke-searcher",
+            title: "poke-search (2023)",
+            usedTechnologies: ["NodeJS", "HTTP", "PokeApi"],
+            overview: "A CLI tool to gather pokemon information from the pokeapi rest api using built-in https nodejs module."
+        },
+        {
             link: "https://github.com/Landbios/Tesis",
-            title: "Animal Adoption System",
+            title: "Animal Adoption System (2022-2023)",
             usedTechnologies: ["NodeJS", "Bootstrap", "HTTP", "MySQL"],
             overview: "A system for the adoption of animals. User creation, Animal registering, notifications."
         },
         {
-            link: "https://www.npmjs.com/package/poke-searcher",
-            title: "poke-search",
-            usedTechnologies: ["NodeJS", "HTTP", "CLI", "PokeApi"],
-            overview: "A CLI tool to gather pokemon information from the pokeapi rest api using built-in https nodejs module."
+            link: "https://github.com/quiKieSamus/rpg-practice",
+            title: "Turn Based RPG Game (2022)",
+            usedTechnologies: ["Javascript"],
+            overview: "Turn Based RPG Web Game."
+        },
+        {
+            link: "https://quikiesamus.github.io/javascript-urbe/devs/ruben/proyectos/pokedex/index.html",
+            title: "Pokedex (2022)",
+            usedTechnologies: ["Javascript"],
+            overview: "App that makes data fetching from the pokeapi rest api."
         },
         {
             link: "https://github.com/quiKieSamus/grinding-code",
-            title: "Codewars kata solutions",
+            title: "Codewars kata solutions (2022-2024)",
             usedTechnologies: ["Javascript"],
             overview: "These are my solutions to several katas in codewars."
         },

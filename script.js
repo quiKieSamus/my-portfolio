@@ -262,6 +262,25 @@ function fillFindMeContainer() {
     });
 }
 
+async function getTime() {
+    try {
+        const res = await fetch("http://worldtimeapi.org/api/timezone/America/Caracas");
+        const json = await res.json();
+        if ("datetime" in json) {
+            return new Date(json.datetime);
+        }
+        throw new Error("Unable to fetch time. Resorting to client-side time");
+    } catch (e) {
+        console.log(e);
+        return new Date();
+    }
+}
+
+async function renderYear() {
+    document.querySelector('.year').textContent = (await getTime()).getFullYear();
+}
+
 fillSkillContainer();
 fillProjectContainer();
 fillFindMeContainer();
+renderYear();

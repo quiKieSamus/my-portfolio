@@ -190,7 +190,7 @@ html, body {
     display: flex;
     background-color: rgb(119, 0, 255);    
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .contact-container {

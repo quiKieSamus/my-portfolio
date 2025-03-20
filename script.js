@@ -42,17 +42,30 @@ hamburguerBtn.addEventListener("click", (e) => {
 });
 
 function fillSkillContainer() {
+    /**
+     * 
+     * @param {string} iconSrc 
+     * @param {string} name 
+     * @returns 
+     */
     function createSkill(iconSrc, name) {
         const div = document.createElement("DIV");
         const icon = document.createElement("I");
         const title = document.createElement("H3");
+        if (iconSrc.startsWith("https://") || iconSrc.startsWith("http://")) {
+            // it's an url
+            const image = document.createElement("img");
+            image.src = iconSrc;
+            image.classList.add("icon");
+            div.appendChild(image);
+        }
         if (Array.isArray(iconSrc.match(/.\/icons\//g))) {
             const image = document.createElement("img");
             image.classList.add("icon")
             image.src = iconSrc;
             div.appendChild(image);
 
-        } else {
+        } else if (iconSrc.startsWith("fa")) {
             icon.classList.add("icon", `fa-brands`, `${iconSrc}`);
             div.appendChild(icon);
         }
@@ -64,19 +77,11 @@ function fillSkillContainer() {
     const container = document.querySelector(".skills-container");
     const skills = [
         {
-            iconSrc: "fa-html5",
-            name: "HTML5"
-        },
-        {
-            iconSrc: "fa-css3",
-            name: "CSS"
-        },
-        {
-            iconSrc: "fa-js",
+            iconSrc: "https://www.svgrepo.com/show/310932/javascript.svg",
             name: "Javascript"
         },
         {
-            iconSrc: "fa-php",
+            iconSrc: "https://www.svgrepo.com/show/306554/php.svg",
             name: "PHP"
         },
         {
@@ -92,6 +97,10 @@ function fillSkillContainer() {
             name: "NodeJS"
         },
         {
+            iconSrc: "https://www.svgrepo.com/show/378789/deno.svg",
+            name: "Deno"
+        },
+        {
             iconSrc: "fa-linux",
             name: "LINUX"
         },
@@ -104,7 +113,11 @@ function fillSkillContainer() {
             name: "Laravel"
         },
         {
-            iconSrc: "./icons/typescript.svg",
+            iconSrc: "https://seekicon.com/free-icon-download/react_1.svg",
+            name: "React"
+        },
+        {
+            iconSrc: "https://www.svgrepo.com/show/349540/typescript.svg",
             name: "Typescript"
         },
 

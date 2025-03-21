@@ -154,6 +154,12 @@ function fillProjectContainer() {
     }
     const projects = [
         {
+            link: "https://jsr.io/@quikiesamus/scrape-bcv",
+            title: "BCV Scraping Tool",
+            usedTechnologies: ["Typescript", "DENO"],
+            overview: "A deno package to scrape off the currencies exchange rate listed on the bcv.org.ve website"
+        },
+        {
             link: "https://github.com/quikiesamus/smart-dtp7-library",
             title: "Smart DTP7 Library (2024)",
             usedTechnologies: ["PHP", "Rest API"],
